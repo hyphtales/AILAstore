@@ -1,22 +1,21 @@
 import { useEffect } from 'react';
-import { AppProvider, useApp } from '@/AppContext';
-import { CartProvider } from '@/CartContext';
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import FeaturedGames from '@/components/FeaturedGames';
-import Categories from '@/components/Categories';
-import AILAPass from '@/components/AILAPass';
-import Trust from '@/components/Trust';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
-import AILAPassPage from '@/components/AILAPassPage';
-import PartnerPage from '@/components/PartnerPage';
-import CartDrawer from '@/components/CartDrawer';
-import GameDetailModal from '@/components/GameDetailModal';
+import { AppProvider, useApp } from './AppContext';
+import { CartProvider } from './CartContext';
+import Header from './Header';
+import Hero from './Hero';
+import FeaturedGames from './FeaturedGames';
+import Categories from './Categories';
+import AILAPass from './AILAPass';
+import Trust from './Trust';
+import ContactSection from './ContactSection';
+import Footer from './Footer';
+import AILAPassPage from './AILAPassPage';
+import PartnerPage from './PartnerPage';
+import CartDrawer from './CartDrawer';
+import GameDetailModal from './GameDetailModal';
 
 function AppContent() {
   const { view, theme } = useApp();
-  
   useEffect(() => {
     document.body.className = theme === 'light' ? 'theme-light' : '';
   }, [theme]);
