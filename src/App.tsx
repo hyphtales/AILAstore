@@ -16,6 +16,7 @@ import GameDetailModal from './GameDetailModal';
 
 function AppContent() {
   const { view, theme } = useApp();
+  
   useEffect(() => {
     document.body.className = theme === 'light' ? 'theme-light' : '';
   }, [theme]);
