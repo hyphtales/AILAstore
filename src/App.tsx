@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { AppProvider, useApp } from '@/context/AppContext';
-import { CartProvider } from '@/context/CartContext';
+import { AppProvider, useApp } from '@/AppContext';
+import { CartProvider } from '@/CartContext';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import FeaturedGames from '@/components/FeaturedGames';
@@ -16,14 +16,14 @@ import GameDetailModal from '@/components/GameDetailModal';
 
 function AppContent() {
   const { view, theme } = useApp();
-
+  
   useEffect(() => {
     document.body.className = theme === 'light' ? 'theme-light' : '';
   }, [theme]);
-
+  
   return (
     <div className={`relative min-h-screen ${theme === 'light' ? 'bg-slate-100' : 'bg-night-700'}`}>
-      {/* Fixed background */}
+      {/* Fond fixe */}
       <div className="pointer-events-none fixed inset-0 z-0">
         {theme === 'dark' ? (
           <>
@@ -54,7 +54,6 @@ function AppContent() {
 
       <div className="relative z-10">
         <Header />
-
         <main>
           {view === 'home' && (
             <>
@@ -69,11 +68,10 @@ function AppContent() {
           {view === 'aila-pass' && <AILAPassPage />}
           {view === 'partner' && <PartnerPage />}
         </main>
-
         <Footer />
       </div>
 
-      {/* Overlays */}
+      {/* Composants superposés */}
       <CartDrawer />
       <GameDetailModal />
     </div>
