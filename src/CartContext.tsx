@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
-import type { Game } from '@/data/games';
+import type { Game } from './games';
 
 export interface CartItem {
   game: Game;
